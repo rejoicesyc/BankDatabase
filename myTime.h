@@ -28,6 +28,9 @@ public:
 
 	//生成宏定义serveTime分钟以内的随机时间myTime类对象
 	void myTimeRandomMinute();
+
+	//返回时间对象的分钟数
+	int myTimetoMinute();
 private:
 	//小时，分钟
 	int hour;

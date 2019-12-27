@@ -27,8 +27,11 @@ class client{
 public:
 	//产生在startTime到endTime之间到达银行的客户对象，同时生成maxServeTime之内的服务时间
 	client();
+
+	//返回对象逗留时间的分钟数
+	int stayTimetoMinute();
 private:
-	//客户的到达时间，离开时间，业务办理时间，等待时间，办理业务的窗口号
+	//客户的到达时间，离开时间，业务办理时间，等待时间，逗留时间，办理业务的窗口号
 	myTime arriveTime;
 	myTime departureTime;
 	myTime serveTime;

@@ -75,7 +75,15 @@ myTime operator-(myTime time1, myTime time2){
 }
 
 ostream& operator<<(ostream& os, myTime time){
-	os << time.hour << " : " << time.minute;
+	if (time.hour < 10){
+		cout << 0;
+	}
+	os << time.hour;
+	os << " : ";
+	if (time.minute < 10){
+		cout << 0;
+	}
+	os << time.minute;
 	return os;
 }
 
@@ -89,4 +97,8 @@ void myTime::myTimeRandom(){
 void myTime::myTimeRandomMinute(){
 	hour = 0;
 	minute = rand() % maxServeTime + 1;
+}
+
+int myTime::myTimetoMinute(){
+	return hour * 60 + minute;
 }
